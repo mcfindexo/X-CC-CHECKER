@@ -1,11 +1,5 @@
 <?php
 
-////////////////=============[Made with ❤️ by MTCTECHX]===============////////////////
-
-///https://api.telegram.org/bot5523681865:AAGnS1eU7lHoltQIYvvgwelzmQHEj8DZivc/setwebhook?url=https://5f73-20-211-45-148.au.ngrok.io/mtcbot.php
-
-
-
 $owner_id = ""; // eneter ur id
 $botToken = "5523681865:AAGnS1eU7lHoltQIYvvgwelzmQHEj8DZivc"; // Enter ur bot token
 $website = "https://api.telegram.org/bot".$botToken;
@@ -29,20 +23,13 @@ sendMessage($chatId, "<code>WELCOME TO X CC CHECKER BOT🇧🇩 !  USE ME TO CHE
 
 //////////=========[Cmds Command]=========//////////
 
-elseif ((strpos($message, ".cmds") === 0)||(strpos($message, "/cmds") === 0)){
+elseif ((strpos($message, ".cmds") === 0)||(strpos($message, "/help") === 0)){
 sendMessage($chatId, "<code>SK KEY CHECK :</code> /sk <code>sk_live_.%0ACHARGE CC CHECK </code>/chk <code>%0ATO KNOW YOUR INFO</code> /info <code>%0A%0ACONTACT </code>@mtctechx <code>TO GET ACCESS 😍</code>");
 }
 
-//////////=========[Info Command]=========//////////
-
-elseif ((strpos($message, ".info") === 0)||(strpos($message, "/info") === 0)){
-sendMessage($chatId, "<b>ID:</b> <code>$userId</code>%0A<b>First Name:</b> $firstname%0A<b>Username:</b> @$username%0A%0A<b>Bot Made by: @MTCTECHX </b>");
-}
-
-
 //////////=========[Chk Command]=========//////////
 
-if ((strpos($message, ".chk") === 0)||(strpos($message, "/chk") === 0)){
+if ((strpos($message, ".chk") === 0)||(strpos($message, "!chk") === 0)){
 $checkUser = userCheck($userId);
 if($checkUser == False){
       return;
